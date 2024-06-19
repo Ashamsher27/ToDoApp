@@ -1,6 +1,6 @@
 //todo-app/todo-backend/models/index.js
 
-const db = require("./models")
+const db = require("./models/")
 const mongoose = require("mongoose")
 mongoose.connect("mongodb://localhost/todo-app", {
   // connecting to the mongodb database name: "todo-app" locally
