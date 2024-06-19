@@ -1,3 +1,4 @@
+//todo-app/todo-backend/models/todo.js
 
 const mongoose = require("mongoose") // requiring the mongoose package
 
