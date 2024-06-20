@@ -1,5 +1,8 @@
 //todo-app/todo-backend/index.js
 
+const cors = require("cors") //allows cross domain http requests for axios 
+app.use(cors())
+
 const express = require("express") // express server
 const app = express() // generate an app object
 const bodyParser = require("body-parser") // requiring the body-parser
@@ -42,9 +45,10 @@ app.put("/todos/:id", async (req, res, next) => {
 })
 app.delete("/todos/:id", async (req, res, next) => {
   try {
-    await db.Todo.findByIdAndRemove(req.params.id)
+    await db.Todo.findByIdAndDelete(req.params.id)
     return success(res, "todo deleted!")
   } catch (err) {
+    console.error(err)
     next({ status: 400, message: "failed to delete todo" })
   }
 })
