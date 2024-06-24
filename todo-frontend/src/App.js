@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react"
 import "./App.css"
 import APIHelper from "./APIHelper.js"
 import TodosList from "./components/TodosList/TodosList"
-import DinosaurBackground from "./images/Dinosaurbackground.jpg"
 
 const App = () => {
   const [todos, setTodos] = useState([])
@@ -64,10 +63,10 @@ const App = () => {
         <div>
           <TodosList todos={todos} updateTodo={updateTodo} deleteTodo={deleteTodo} />
         </div>
+
+        
       </div>
-      <div>
-        <img src={DinosaurBackground} alt="dinosaur" />
-      </div>
+      
 
     </div>
   )
